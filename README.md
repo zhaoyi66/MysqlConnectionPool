@@ -164,7 +164,7 @@ CommonConnectionPool.h和CommonConnectionPool.cpp
 
 CommonConnectionPool对外提供连接池的唯一实例，获取可用连接的接口
 
-内部提供读取文件的接口，生产者线程函数，定时线程函数
+内部提供读取文件的接口，生产者线程函数，定时线程函数，并在构造函数里定义相关线程类
 
 ~~~c++
 #pragma once
