@@ -1,3 +1,6 @@
+## C++11 mysql连接池
+
+
 ## 背景
 
 为了处理用户的一次CURD请求，服务器端与MySql Server之间要必须经历 **TCP三次握手建立连接**，**MySQL Server连接认证**、**MySQL Server关闭连接回收资源**和**TCP四次挥手断开连接**
