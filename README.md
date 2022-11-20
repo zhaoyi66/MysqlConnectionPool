@@ -1,4 +1,4 @@
-## C++11 mysql连接池
+ C++11 mysql连接池
 
 
 ## 背景
@@ -335,7 +335,7 @@ void ConnectionPool::produceConnectionTask()
 		while (!_connectionQue.empty())
 		{
 			//队列不空，此处生产线程进入等待状态
-			cv.wait(lock);//解锁 线程阻塞直到被唤醒 再加锁处理临界资源
+			cv.wait(lock);//解锁 线程进入等待态直到条件满足变阻塞 再抢锁进入就绪态
 		}
 
 		// 连接数量没有到达上限，继续创建新的连接
