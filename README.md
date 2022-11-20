@@ -389,10 +389,7 @@ shared_ptr<Connection> ConnectionPool::getConnection()
 	});
 
 	_connectionQue.pop();
-	if (_connectionQue.empty())
-	{
-		cv.notify_all();
-	}
+	cv.notify_all();////多生产，少消费
 	return sp;
 }
 
